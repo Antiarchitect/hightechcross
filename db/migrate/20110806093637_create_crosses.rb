@@ -4,7 +4,7 @@ class CreateCrosses < ActiveRecord::Migration
 
       # Regular columns
       t.string :name
-      t.boolean :active
+      t.boolean :active, :default => true, :null => false
       t.datetime :start
 
       t.timestamps

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110806093637) do
 
   create_table "crosses", :force => true do |t|
     t.string   "name"
-    t.boolean  "active"
+    t.boolean  "active",     :default => true, :null => false
     t.datetime "start"
     t.datetime "created_at"
     t.datetime "updated_at"
