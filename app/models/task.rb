@@ -7,4 +7,5 @@ class Task < ActiveRecord::Base
   validates :first_hint, :presence => true
   validates :second_hint, :presence => true
   validates :third_hint, :presence => true
+  validates_uniqueness_of :content, :scope => :cross_id
 end

@@ -41,4 +41,13 @@ describe Task do
     task = Task.new(valid_attrs.merge(:third_hint => ""))
     task.should_not be_valid
   end
+
+  it "should reject instance with content taken in scope of same cross" do
+    content = "somecontent"
+    Task.create!(valid_attrs.merge(:content => content))
+    wrong_task = Task.new(valid_attrs.merge(:content => content))
+    task = Task.new(valid_attrs.merge(:content => content, :cross => Factory.create(:cross)))
+    task.should be_valid
+    wrong_task.should_not be_valid
+  end
 end

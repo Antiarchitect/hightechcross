@@ -1,8 +1,7 @@
 class CreateCrosses < ActiveRecord::Migration
   def self.up
     create_table :crosses do |t|
-
-      # Regular columns
+      # Regular attributes
       t.string :name
       t.boolean :active, :default => true, :null => false
       t.datetime :start
