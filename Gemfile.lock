@@ -102,6 +102,7 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     rubyzip (0.9.4)
+    russian (0.2.7)
     selenium-webdriver (0.2.2)
       childprocess (>= 0.1.9)
       ffi (>= 1.0.7)
@@ -129,3 +130,4 @@ DEPENDENCIES
   pg
   rails (= 3.0.9)
   rspec-rails
+  russian

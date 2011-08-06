@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 
 gem 'active_scaffold_vho'
+gem 'russian'
 
 group :development do
   gem 'rspec-rails'
