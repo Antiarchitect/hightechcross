@@ -11,11 +11,8 @@ gem 'russian'
 gem 'heroku'
 gem 'taps'
 
-group :development do
-  gem 'rspec-rails'
-end
-
-group :test do
+group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end

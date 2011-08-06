@@ -8,7 +8,7 @@ ru:
               blank: "не может быть пустым."
 
     models:
-      cross: "Кросс"
+      cross: "Кроссы"
 
     attributes:
       cross:

@@ -1,0 +1,19 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        task:
+          attributes:
+            content:
+              blank: "не может быть пустым."
+
+    models:
+      task: "Задания"
+
+    attributes:
+      task:
+        content: "Текст задания"
+        answer: "Правильный ответ"
+        first_hint: "Первая подсказка"
+        second_hint: "Вторая подсказка"
+        third_hint: "Третья подсказка"
