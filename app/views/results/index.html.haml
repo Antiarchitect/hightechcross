@@ -15,32 +15,27 @@
       %th=t(".solved")
       %th=t(".hints")
       %th=t(".time")
-    - cross.teams.each_with_index do |team, index|
+    - cross.teams.sort_by{ |t| [ - t.solved_tasks_in(cross).size, t.general_time_in(cross)] }.each_with_index do |team, index|
       %tr
         %td= index + 1
         %td= team.name
-        - solved_tasks = 0
-        - general_time = 0
         - tasks.each do |task|
           - guesses = team.guesses.by_task(task)
           %td
             - if guesses.any?
               - correct_guesses = guesses.select(&:correct?)
               - if correct_guesses.any?
-                - solved_tasks += 1
-                - time = correct_guesses.first.created_at - cross.start + (10 * team.taken_hints.by_task(task).size).minutes
+                - time = team.time_in_task(task)
                 %span.blue
                   = "+"
                   %br
                   = format_time_distance(time)
               - else
-                - time = guesses.first.created_at - cross.start + (10 * team.taken_hints.by_task(task).size).minutes
+                - time = team.time_in_task(task)
                 %span.grey
                   = "-"
                   %br
                   = format_time_distance(time)
-              - general_time += time
-        %td= solved_tasks
-        - hints_taken = team.taken_hints.by_task(tasks).size
-        %td= hints_taken
-        %td= format_time_distance(general_time)
+        %td= team.solved_tasks_in(cross).size
+        %td= team.taken_hints.by_task(tasks).size
+        %td= format_time_distance(team.general_time_in(cross))
