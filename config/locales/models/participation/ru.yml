@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        participation:
+          attributes:
+
+    models:
+      participation: "Команды"
+
+    attributes:
+      participation:
+        team: "Команда"

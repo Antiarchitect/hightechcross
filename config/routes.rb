@@ -2,6 +2,10 @@ Hightechcross::Application.routes.draw do
   namespace :admin do
     resources :crosses do
       as_routes
+      end
+
+    resources :participations do
+      as_routes
     end
 
     resources :tasks do
