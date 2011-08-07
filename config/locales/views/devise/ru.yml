@@ -1,0 +1,7 @@
+ru:
+  devise:
+    sessions:
+      new:
+        results: "Результаты кросса"
+        title: "Вход"
+        submit: "Войти"
