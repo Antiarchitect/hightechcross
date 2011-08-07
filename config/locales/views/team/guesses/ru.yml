@@ -3,3 +3,8 @@ ru:
     guesses:
       guess:
         submit: "Отправить"
+        hints: "Подсказки: "
+        first_hint: "Подсказка №1"
+        second_hint: "Подсказка №2"
+        third_hint: "Подсказка №3"
+        solved: "Задание решено!"

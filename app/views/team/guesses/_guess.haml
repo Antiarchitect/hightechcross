@@ -3,7 +3,11 @@
     %p
       = f.label :answer
       = f.text_field :answer
-      = link_to
+      = f.hidden_field :task_id
+      = t(".hints")
+      = link_to t(".first_hint"), team_hint_path(1, :task => guess.task)
+      = link_to t(".second_hint"), team_hint_path(2, :task => guess.task)
+      = link_to t(".third_hint"), team_hint_path(3, :task => guess.task)
     %p
       = f.submit t(".submit")
 - else

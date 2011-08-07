@@ -10,4 +10,5 @@
   %body
     = render 'layouts/menus/admin_menu' if admin_signed_in?
     = render 'layouts/menus/team_menu' if team_signed_in?
+    = render 'layouts/flashes'
     = yield

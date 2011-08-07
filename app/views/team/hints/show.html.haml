@@ -1,0 +1,13 @@
+%p
+  = t(".task")
+  %br
+  = @task.content
+%p
+  = t(".warning")
+%p
+  = t(".hint")
+  %br
+  = @hint
+%p
+  = link_to t(:back), :back
+

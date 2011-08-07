@@ -1,2 +1,43 @@
 %h1= t(".title")
 = link_to t(".team_sign_in"), new_team_session_path unless team_signed_in?
+
+
+- @crosses.each do |cross|
+  - tasks =  cross.tasks
+  %h2= cross.name
+  %br
+  %table.results
+    %tr
+      %th
+      %th=t(".team")
+      - tasks.each_with_index.each do |task, index|
+        %th=t(".task", :number => index + 1)
+      %th=t(".solved")
+      %th=t(".hints")
+      %th=t(".time")
+    - cross.teams.each_with_index do |team, index|
+      %tr
+        %td= index + 1
+        %td= team.name
+        - solved_tasks = 0
+        - general_time = 0
+        - tasks.each do |task|
+          - guesses = team.guesses.by_task(task)
+          %td
+            - if guesses.any?
+              - correct_guesses = guesses.select(&:correct?)
+              - if correct_guesses.any?
+                - solved_tasks += 1
+                = "+"
+                %br
+                - time = correct_guesses.first.created_at - cross.start
+                = Time.at(time).strftime('%H:%M')
+              - else
+                = "-"
+                %br
+                - time = guesses.first.created_at - cross.start
+                = Time.at(time).strftime('%H:%M')
+              - general_time += time
+        %td= solved_tasks
+        %td= team.taken_hints.by_task(tasks).size
+        %td= Time.at(general_time).strftime('%H:%M')

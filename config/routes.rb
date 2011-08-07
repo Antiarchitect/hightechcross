@@ -29,5 +29,6 @@ Hightechcross::Application.routes.draw do
     root :to => 'dashboard#index'
     resources :guesses, :only => [:create]
     resources :dashboard, :only => [:index]
+    resources :hints, :only => [:show]
   end
 end

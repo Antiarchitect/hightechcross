@@ -1,0 +1,15 @@
+.flash {
+  border: 1px blue;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: black;
+}
+
+.flash.notice {
+  background: #E0E0FF;
+}
+
+.flash.alert {
+  background: #FFE0E0;
+}

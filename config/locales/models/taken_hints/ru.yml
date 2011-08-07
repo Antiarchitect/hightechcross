@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        taken_hint:
+          attributes:
+
+    models:
+      taken_hint: "Подсказки"
+
+    attributes:
+      taken_hint:
+        hint_number: "Номер подсказки"
