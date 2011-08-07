@@ -6,7 +6,7 @@ ru:
           attributes:
 
     models:
-      participation: "Команды"
+      participation: "Участвующие команды"
 
     attributes:
       participation:
