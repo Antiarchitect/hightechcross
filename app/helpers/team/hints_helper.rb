@@ -1,0 +1,2 @@
+module Team::HintsHelper
+end

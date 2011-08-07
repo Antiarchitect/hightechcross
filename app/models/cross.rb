@@ -7,6 +7,6 @@ class Cross < ActiveRecord::Base
   validates :active, :inclusion => [true, false]
   validates :start, :presence => true
 
-  scope :active, :conditions => { :active => true }
+  scope :active, lambda { { :conditions => ["active = ? AND start < ?", true, Time.now] } }
   default_scope :order => 'created_at DESC'
 end

@@ -1,0 +1,10 @@
+- unless guess.task.solved_by?(current_team)
+  = form_for [:team, guess] do |f|
+    %p
+      = f.label :answer
+      = f.text_field :answer
+      = link_to
+    %p
+      = f.submit t(".submit")
+- else
+  = t(".solved")

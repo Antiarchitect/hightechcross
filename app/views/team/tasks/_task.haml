@@ -1,0 +1,9 @@
+%hr
+%p= t(".number", :number => task_counter + 1)
+%p
+  %br
+  = t(".content")
+  %br
+  = task.content
+%p
+  = render task.guesses.new

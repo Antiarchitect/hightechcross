@@ -1,0 +1,6 @@
+ru:
+  team:
+    tasks:
+      task:
+        number: "Задание №%{number}"
+        content: "Текст задания:"

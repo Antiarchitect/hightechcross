@@ -9,6 +9,7 @@ class Guess < ActiveRecord::Base
   validates :answer, :presence => true
   validates_with GuessValidator
 
+  scope :by_team, lambda { |team| { :conditions => { :team_id => team } } }
   default_scope :order => 'created_at DESC'
 
   # Instance methods

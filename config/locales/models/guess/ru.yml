@@ -12,5 +12,5 @@ ru:
       guess: "Предположение"
 
     attributes:
-      team:
+      guess:
         answer: "Ответ"
