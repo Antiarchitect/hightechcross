@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe Team do
-  let(:valid_attrs) { { :name => "Some Team Name 8762134" } }
+  let(:valid_attrs) { { :name => "Some Team Name 8762134",
+                        :email => 'some_valid@email.com',
+                        :password => '12345678',
+                        :password_confirmation => '12345678' } }
 
   it "should create instance with valid attributes given" do
     Team.create!(valid_attrs)
