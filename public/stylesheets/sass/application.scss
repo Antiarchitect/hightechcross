@@ -1,0 +1,24 @@
+table.results {
+  border: 1px solid black;
+  border-collapse: collapse;
+  tr {
+    background: white;
+    &:nth-child(even) {
+      background: #F0F0F0;
+    }
+  }
+  td, th {
+    text-align: center;
+    border: 1px solid silver;
+    padding: 0.1em 0.5em;
+    span.blue {
+      color: blue;
+    }
+    span.grey {
+      color: grey;
+    }
+  }
+  th {
+    background: #E0E0FF;
+  }
+}

@@ -1,0 +1,17 @@
+table.results {
+  border: 1px solid black;
+  border-collapse: collapse; }
+  table.results tr {
+    background: white; }
+    table.results tr:nth-child(even) {
+      background: #F0F0F0; }
+  table.results td, table.results th {
+    text-align: center;
+    border: 1px solid silver;
+    padding: 0.1em 0.5em; }
+    table.results td span.blue, table.results th span.blue {
+      color: blue; }
+    table.results td span.grey, table.results th span.grey {
+      color: grey; }
+  table.results th {
+    background: #E0E0FF; }

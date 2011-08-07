@@ -6,6 +6,8 @@ class Team < User
 
   validates :name, :presence => true, :uniqueness => true
 
+  default_scope :order => 'created_at ASC'
+
   # Instance methods
   def update_with_password(params={})
     if params[:password].blank?
