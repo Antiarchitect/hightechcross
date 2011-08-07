@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Cross do
-  let(:valid_attrs) { { :name => "Some cross name",
+  let(:valid_attrs) { { :name => Factory.next(:somestring),
                         :active => true,
                         :start =>  Time.now } }
 

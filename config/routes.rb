@@ -6,7 +6,7 @@ Hightechcross::Application.routes.draw do
   devise_for :teams
 
   namespace :admin do
-    root :to => 'admin#crosses'
+    root :to => 'crosses#index'
 
     resources :crosses do
       as_routes
@@ -23,5 +23,11 @@ Hightechcross::Application.routes.draw do
     resources :teams do
       as_routes
     end
+  end
+
+  namespace :team do
+    root :to => 'dashboard#index'
+    resources :guesses, :only => [:create]
+    resources :dashboard, :only => [:index]
   end
 end

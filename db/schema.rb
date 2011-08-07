@@ -10,12 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110807004652) do
+ActiveRecord::Schema.define(:version => 20110807050148) do
 
   create_table "crosses", :force => true do |t|
     t.string   "name"
     t.boolean  "active",     :default => true, :null => false
     t.datetime "start"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "guesses", :force => true do |t|
+    t.integer  "task_id"
+    t.integer  "team_id"
+    t.string   "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

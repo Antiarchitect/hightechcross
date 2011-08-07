@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        guess:
+          delay: "Нельзя послать ответ, так как предыдущий ответ был дан менее чем 10 минут назад."
+          attributes:
+            name:
+              blank: "не может быть пустым."
+
+    models:
+      guess: "Предположение"
+
+    attributes:
+      team:
+        answer: "Ответ"

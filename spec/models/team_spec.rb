@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Team do
   let(:valid_attrs) { { :name => "Some Team Name 8762134",
-                        :email => 'some_valid@email.com',
+                        :email => Factory.next(:email),
                         :password => '12345678',
                         :password_confirmation => '12345678' } }
 

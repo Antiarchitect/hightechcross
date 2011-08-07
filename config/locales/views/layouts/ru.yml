@@ -2,6 +2,11 @@ ru:
   layouts:
     menus:
       admin_menu:
+        results: "Таблица результатов"
         crosses: "Кроссы"
         teams: "Команды"
+        sign_out: "Выход"
+      team_menu:
+        dashboard: "Задания"
+        results: "Таблица результатов"
         sign_out: "Выход"

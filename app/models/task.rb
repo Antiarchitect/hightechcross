@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
   belongs_to :cross
+  has_many :guesses, :dependent => :destroy
 
   validates :cross, :presence => true
   validates :content, :presence => true
