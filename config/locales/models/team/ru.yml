@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        team:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+
+    models:
+      team: "Команды"
+
+    attributes:
+      team:
+        name: "Название"

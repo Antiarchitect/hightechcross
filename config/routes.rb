@@ -7,5 +7,9 @@ Hightechcross::Application.routes.draw do
     resources :tasks do
       as_routes
     end
+
+    resources :teams do
+      as_routes
+    end
   end
 end
