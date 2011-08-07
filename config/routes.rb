@@ -1,4 +1,7 @@
 Hightechcross::Application.routes.draw do
+
+  root :to => 'results#index'
+
   devise_for :admins
   devise_for :teams
 

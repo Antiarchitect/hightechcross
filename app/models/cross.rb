@@ -6,4 +6,7 @@ class Cross < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
   validates :active, :inclusion => [true, false]
   validates :start, :presence => true
+
+  scope :active, :conditions => { :active => true }
+  default_scope :order => 'created_at DESC'
 end
