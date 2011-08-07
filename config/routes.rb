@@ -7,6 +7,10 @@ Hightechcross::Application.routes.draw do
       as_routes
       end
 
+    resources :participants do
+      as_routes
+    end
+
     resources :participations do
       as_routes
     end

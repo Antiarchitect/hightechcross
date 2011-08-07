@@ -1,0 +1,6 @@
+ru:
+  layouts:
+    menus:
+      admin_menu:
+        crosses: "Кроссы"
+        teams: "Команды"
