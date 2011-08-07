@@ -3,8 +3,10 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 gem 'pg'
 gem 'jquery-rails'
+gem 'haml'
 
 gem 'active_scaffold_vho'
+gem 'devise'
 gem 'russian'
 
 # Heroku dependencies:

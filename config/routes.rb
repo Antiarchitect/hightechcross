@@ -1,4 +1,7 @@
 Hightechcross::Application.routes.draw do
+  devise_for :admins
+  devise_for :participants
+
   namespace :admin do
     resources :crosses do
       as_routes
