@@ -8,6 +8,5 @@
     = csrf_meta_tag
 
   %body
-    -#- if admin_signed_in?
-    = render 'layouts/menus/admin_menu'
+    = render 'layouts/menus/admin_menu' if admin_signed_in?
     = yield

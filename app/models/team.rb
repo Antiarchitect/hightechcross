@@ -1,7 +1,6 @@
-class Team < ActiveRecord::Base
+class Team < User
   has_many :participations, :dependent => :destroy
   has_many :crosses, :through => :participations
-  has_many :participants
 
   validates :name, :presence => true, :uniqueness => true
 end

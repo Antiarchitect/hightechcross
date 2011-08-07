@@ -1,13 +1,11 @@
 Hightechcross::Application.routes.draw do
   devise_for :admins
-  devise_for :participants
+  devise_for :teams
 
   namespace :admin do
-    resources :crosses do
-      as_routes
-      end
+    root :to => 'admin#crosses'
 
-    resources :participants do
+    resources :crosses do
       as_routes
     end
 

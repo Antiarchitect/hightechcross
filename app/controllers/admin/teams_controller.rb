@@ -1,6 +1,6 @@
-class Admin::TeamsController < ApplicationController
+class Admin::TeamsController < Admin::BaseController
   active_scaffold do |config|
-    config.nested.add_link(:participants)
-    config.columns = [:name]
+    config.columns = [:name, :email, :password, :password_confirmation]
+    config.list.columns = config.show.columns = [:name, :email]
   end
 end
