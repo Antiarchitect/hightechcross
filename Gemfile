@@ -8,7 +8,7 @@ gem 'sass'
 
 gem 'active_scaffold_vho'
 gem 'devise'
-gem 'russian'
+gem 'russian', :git => 'git://github.com/yaroslav/russian.git'
 
 group :development, :test do
   gem 'capybara'
