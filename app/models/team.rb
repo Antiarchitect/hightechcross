@@ -19,7 +19,7 @@ class Team < User
     if correct_guesses.any?
       correct_guesses.first.created_at - task.cross.start + (10 * taken_hints.by_task(task).size).minutes
     elsif all_guesses.any?
-      guesses.first.created_at - task.cross.start + (10 * taken_hints.by_task(task).size).minutes
+      guesses.first.created_at - task.cross.start
     else
       0
     end
