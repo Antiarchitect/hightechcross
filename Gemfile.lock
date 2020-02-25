@@ -48,8 +48,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 0.2.0)
       xpath (~> 0.1.4)
-    childprocess (0.2.0)
-      ffi (~> 1.0.6)
+    childprocess (3.0.0)
     devise (1.4.2)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
@@ -61,7 +60,7 @@ GEM
     factory_girl_rails (1.1.0)
       factory_girl (~> 2.0.0)
       railties (>= 3.0.0)
-    ffi (1.0.9)
+    ffi (1.12.2)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
